@@ -1,0 +1,24 @@
+to-do:
+
+navbar
+to record - dynamodb:
+	- bases
+	- guns
+	- cars
+	* website to display all players who bought each item as well
+	* chart to display all item's 
+	* item model:
+		- name - string
+		- icon - string
+		- release date - string
+		- last purchase date - string
+		- array holding every player who owns that item: 
+			- userid
+			- purchase date
+			- api call to roblox to pull their up to date pfp
+			* consider moving to a new table - a table for each item?
+auth page
+udpate logs [to move to actual site as well] - dynamodb
+
+
+completed:

@@ -1,0 +1,15 @@
+.container{
+
+/* x-axis centering */
+justify-content: center;
+background-color:#F1F1F1;
+padding-top: 20px
+
+}
+
+.header{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    
+}
