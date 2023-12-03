@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './page.module.css';
 import Link from 'next/link';
 
+import Entry from '@/components/entry/Entry';
+
 const Items_Page = () => {
     /* 
         before making db call, create weapons
@@ -17,7 +19,7 @@ const Items_Page = () => {
     ];
 
     // for vehicle
-    const cars_arr = [
+    const vehicle_arr = [
         { vehicle_id: '001', vehicle_name: 'charger'},
         { vehicle_id: '002', vehicle_name: 'suv'},
         { vehicle_id: '003', vehicle_name: 'lamborghini'}
@@ -28,32 +30,14 @@ const Items_Page = () => {
 
             {/* for guns */}
             <h1 className = {styles.header}>guns</h1>
-            <div className = {styles.display_contianer}>
-                {weapons_arr.map(weapon => 
-                        <Link
-                            href = "/weapon"
-                            className = {styles.display_item}
-                        >
-                            <h1 className = {styles.item_name}>{weapon.weapon_name} </h1>
-                            <p className = {styles.item_metadata}> ID: {weapon.weapon_id} </p>
-                        </Link>
-                    ) 
-                }  
+            <div className = {styles.display_container}>
+                {weapons_arr.map(cur_weapon => <Entry id = {cur_weapon.weapon_id} name = {cur_weapon.weapon_name}/>)}  
             </div>
 
             {/* for vehicles */}
             <h1 className = {styles.header}>vehicles</h1>
-            <div className = {styles.display_contianer}>
-                {weapons_arr.map(vehicle => 
-                        <Link
-                            href = "/vehicle"
-                            className = {styles.display_item}
-                        >
-                            <h1 className = {styles.item_name}>{vehicle.weapon_name} </h1>
-                            <p className = {styles.item_metadata}> ID: {vehicle.weapon_id} </p>
-                        </Link>
-                    ) 
-                }  
+            <div className = {styles.display_container}>
+                {weapons_arr.map(cur_vehicle => <Entry id = {cur_vehicle.weapon_id} name = {cur_vehicle.weapon_name}/>)}
             </div>
 
         </div>

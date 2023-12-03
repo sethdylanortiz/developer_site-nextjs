@@ -25,7 +25,7 @@ const Navbar = () => {
     const links = [
         { label: 'Home', href: '/' },
         { label: 'Updates', href: '/updatelog'},
-        { label: 'Items', href: '/items' },
+        { label: 'Overview', href: '/overview' },
     ];
 
     return (
