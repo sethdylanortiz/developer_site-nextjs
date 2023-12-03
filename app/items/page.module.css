@@ -4,12 +4,48 @@
 justify-content: center;
 background-color:#F1F1F1;
 padding-top: 20px
-
 }
 
 .header{
     font-size: 25px;
     font-weight: bold;
     text-align: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.display_contianer{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.display_item{
+    background-color: white;
+    width: 85%;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
     
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    /* border-radius: 15px; */
+}
+
+.item_name{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item_metadata{
+
 }

@@ -26,7 +26,7 @@ const Navbar = () => {
         { label: 'Home', href: '/' },
         { label: 'Updates', href: '/updatelog'},
         { label: 'Items', href: '/items' },
-    ]
+    ];
 
     return (
         <nav className = {styles.container}>
