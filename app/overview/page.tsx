@@ -1,15 +1,12 @@
 import React from 'react';
 import styles from './page.module.css';
-import Link from 'next/link';
 
+import fetch from 'node-fetch';
+
+// components
 import Entry from '@/components/entry/Entry';
 
-const Items_Page = () => {
-    /* 
-        before making db call, create weapons
-            - to-do: change onto a serpate table only contianing all weapon information 
-                    so we don't have to keep updating website each weapon addition - dynamically
-    */
+const Overview_page = () => {
 
     // for guns
     const weapons_arr = [
@@ -25,6 +22,8 @@ const Items_Page = () => {
         { vehicle_id: '003', vehicle_name: 'lamborghini'}
     ];
 
+
+
     return (
         <div className = {styles.container}>
 
@@ -37,11 +36,11 @@ const Items_Page = () => {
             {/* for vehicles */}
             <h1 className = {styles.header}>vehicles</h1>
             <div className = {styles.display_container}>
-                {weapons_arr.map(cur_vehicle => <Entry id = {cur_vehicle.weapon_id} name = {cur_vehicle.weapon_name}/>)}
+                {vehicle_arr.map(cur_vehicle => <Entry id = {cur_vehicle.vehicle_id} name = {cur_vehicle.vehicle_name}/>)}
             </div>
 
         </div>
     )
 }
 
-export default Items_Page;
+export default Overview_page;

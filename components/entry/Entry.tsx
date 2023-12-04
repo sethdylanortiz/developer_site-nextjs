@@ -6,7 +6,7 @@ import styles from './entry.module.css';
 const Entry = ({name, id} : {name: string; id: string}) => {
     return (
         <Link
-            href = "/weapon"
+            href = {`/overview/item/${id}`}
             className = {styles.display_item}
             >
             <h1 className = {styles.item_name}>{name}</h1>
