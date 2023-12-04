@@ -3,11 +3,12 @@ import { NextResponse } from 'next/server';
 // import methods
 import { get_all_items } from '../../lib/dynamodb';
 
-export async function GET(request) {
+export async function GET() {
 
     // const {item_type} = await request.json();
     try{
         // call get method
+
         const items_obj = await get_all_items("weapon");
 
         // for parsing
