@@ -30,9 +30,6 @@ const doc_client = DynamoDBDocumentClient.from(db_client);
 
 // method to GET all items [for display]
 const get_all_items = async(item_type) => {
-    console.log("\n\n\ninside get_all_items()!\n");
-    // delete
-    item_type = "weapon";
 
     // item_type = weapon/vehicle/base/etc.
     const tablename = "bloxrp-" + item_type + "_table";
