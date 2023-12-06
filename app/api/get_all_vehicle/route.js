@@ -3,12 +3,9 @@ import { NextResponse } from 'next/server';
 // import methods
 import { get_all_items } from '../../lib/dynamodb';
 
-export async function GET( params) {
+export async function GET() {
 
     try{
-
-        console.log("route.js, params.item_type: " + params.item_type);
-
         // call get method
         const items_obj = await get_all_items("vehicle");
 

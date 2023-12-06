@@ -43,8 +43,16 @@ const get_all_items = async(item_type) => {
 };
 
 // method to GET item's data
-const get_item = async(item_id) => {
-    ;
+const get_item = async(item_type, item_id) => {
+
+    console.log("dynamodb.js, item_type: " + item_type + ", " + typeof item_type);
+    console.log("dynamodb.js, item_id: " + item_id + ", " + typeof item_id);
+
+    // item_type = weapon/vehicle/base/etc.
+    var params = { TableName: "bloxrp-" + item_type + "_table" };
+    params.Key = item_type == "weapon" ? { weapon_id: item_id } : { vehicle_id: item_id };
+
+    return doc_client.send(new GetCommand(params));
 };
 
 export{
